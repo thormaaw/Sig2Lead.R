@@ -9,7 +9,8 @@ ConDisconSignatures <- function(signatureID)
   for (i in 1:length(signatureID))
   {
 #url2 <- paste("http://www.ilincs.org/api/SignatureMeta/findConcordantSignatures?sigID=%22",signatureID,"%22&lib=%22LIB_5%22", sep="")
-    url2 <- paste("http://www.ilincs.org/api/SignatureMeta/findConcordantSignatures?sigID=%22",signatureID[[i]],"%22&lib=%22LIB_5%22", sep="")
+    #url2 <- paste("http://www.ilincs.org/api/SignatureMeta/findConcordantSignatures?sigID=%22",signatureID[[i]],"%22&lib=%22LIB_5%22", sep="")
+    url2 <- paste("http://ilincs2018.ilincs.org/api/SignatureMeta/findConcordantSignatures?sigID=%22",signatureID[[i]],"%22&lib=%22LIB_5%22", sep="")
 df <- fromJSON(url2)
 if (length(df)>0)
 df2<<- df[order(df$similarity), ]
