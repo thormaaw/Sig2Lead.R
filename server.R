@@ -366,7 +366,7 @@ shinyServer(function(input, output) {
 
     CompoundName <- list()
     for (j in 1:length(CompoundLSM)){
-      if (grep("LSM-", CompoundLSM[[j]])==1){
+      if (length(grep("LSM-", CompoundLSM[[j]]))!=0 && grep("LSM-", CompoundLSM[[j]])==1){
         #for (f in 1:length(df2$lincspertid)){
           if (CompoundLSM[[j]] %in% df2$lincspertid){
             index <- which(df2$lincspertid==CompoundLSM[[j]])
