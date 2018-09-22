@@ -347,7 +347,8 @@ shinyServer(function(input, output) {
     observeEvent(input$GetSTITCH, {
     print("Getting Script")
     #source("./lib/StitchNetFn3.R")
-    source("./lib/StitchNetFn7.R")
+    #source("./lib/StitchNetFn7.R")
+    source("./lib/StitchNetFn8.1.R")
     print("sourced")
     #stitchNet("sirolimus", "mtor")
     SelectedCluster <- input$ClusterNumber
