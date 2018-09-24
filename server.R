@@ -389,6 +389,7 @@ shinyServer(function(input, output) {
     CompoundName <<- CompoundName
     
     chemInput <- unlist(CompoundName)
+    chemInput <<- chemInput
     stitchNet(chem = chemInput, gene = input$Gene, limit = input$Connections)
     print("function ran")
     output$STITCHPlot <- renderVisNetwork(visNetwork(molnodes, interScore) %>% 
